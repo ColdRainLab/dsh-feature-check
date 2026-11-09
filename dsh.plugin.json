@@ -1,0 +1,12 @@
+{
+  "name": "dsh-feature-check",
+  "description": "DSH 启动自检：对比上次健康启动的基线，报告丢失的 Loader 条目、客户端模块与被兼容性跳过的插件。",
+  "version": "0.1.2",
+  "entry": {
+    "name": "dsh-feature-check",
+    "inject": ["webServer", "loader"]
+  },
+  "client": {
+    "platform": "web"
+  }
+}

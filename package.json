@@ -1,0 +1,46 @@
+{
+  "name": "dsh-feature-check",
+  "version": "0.1.2",
+  "description": "DSH 启动自检：每次启动对比上次健康启动的基线，报告丢失的 Loader 条目、客户端模块与被兼容性跳过的插件（DSH 升级后尤其有用）。",
+  "type": "module",
+  "license": "MIT",
+  "author": "ColdRainLab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColdRainLab/dsh-feature-check.git"
+  },
+  "homepage": "https://github.com/ColdRainLab/dsh-feature-check#readme",
+  "bugs": {
+    "url": "https://github.com/ColdRainLab/dsh-feature-check/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}

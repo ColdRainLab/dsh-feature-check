@@ -1,0 +1,4 @@
+# dsh-feature-check 宿主半边：注册 /api/feature-check/* 路由，启动时对比基线检查功能是否缺失。
+- insert:
+    - id: dsh-feature-check
+      name: dsh-feature-check
